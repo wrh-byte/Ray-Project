@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabelPrint", "LabelPrint.csproj", "{C4282FC4-9211-496A-A36D-407778EFE346}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LabelPrintSetup", "..\LabelPrintSetup\LabelPrintSetup.vdproj", "{DA313B6C-5717-4A1A-9B70-5A9086255872}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4282FC4-9211-496A-A36D-407778EFE346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4282FC4-9211-496A-A36D-407778EFE346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4282FC4-9211-496A-A36D-407778EFE346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4282FC4-9211-496A-A36D-407778EFE346}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA313B6C-5717-4A1A-9B70-5A9086255872}.Debug|Any CPU.ActiveCfg = Debug
+		{DA313B6C-5717-4A1A-9B70-5A9086255872}.Release|Any CPU.ActiveCfg = Release
+		{DA313B6C-5717-4A1A-9B70-5A9086255872}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59116B5D-2F2C-4C40-9AC7-373C8A62B14F}
+	EndGlobalSection
+EndGlobal

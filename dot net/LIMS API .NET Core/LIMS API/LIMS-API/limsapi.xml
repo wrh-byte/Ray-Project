@@ -1,0 +1,707 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>limsapi</name>
+    </assembly>
+    <members>
+        <member name="M:LIMS_API.Bll.CommonBll.ListToDataTable(System.Collections.IList)">
+            <summary>
+            C# List转换成DataTable 列顺序根据创建Model顺序
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Bll.CommonBll.CreateTable(Aspose.Words.Tables.Table,System.Collections.IList,Aspose.Words.Document)">
+            <summary>
+            根据datatable创建表格(末尾添加)
+            </summary>
+            <param name="table"></param>
+            <param name="list"></param>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Bll.CommonBll.InsertRowToTable(Aspose.Words.Tables.Table,Aspose.Words.ParagraphAlignment,System.String,System.Int32,System.Collections.IList,Aspose.Words.Document)">
+            <summary>
+            在表格中插入行
+            </summary>
+            <param name="table"></param>
+            <param name="cellAlignment"></param>
+            <param name="FontName"></param>
+            <param name="startRow"></param>
+            <param name="list"></param>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Bll.CommonBll.FillBookmark``1(Aspose.Words.Document,``0)">
+            <summary>
+            填充Bookmark 根据model中与bookmark中名称相同的部分
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="doc"></param>
+            <param name="model"></param>
+        </member>
+        <member name="M:LIMS_API.Bll.CommonBll.CreateSaveFilePath(System.String,System.String)">
+            <summary>
+            创建文件保存路径
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Bll.CommonBll.CreateDraftReportSavePath(System.String,System.String)">
+            <summary>
+            CreateDraftReportSavePath
+            </summary>
+            <param name="fileName"></param>
+            <param name="filetype"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Bll.CommonBll.HMACSHA1Text(System.String,System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="key"></param>
+            <param name="secret"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Bll.CommonBll.CreateCheckBox(Aspose.Words.Document,System.String[])">
+            <summary>
+            创建checkbox
+            </summary>
+            <param name="bookmarkStrings"></param>
+        </member>
+        <member name="M:LIMS_API.Bll.CommonBll.MergeCells(Aspose.Words.Tables.Cell,Aspose.Words.Tables.Cell)">
+            <summary>
+            合并单元格
+            </summary>
+            <param name="startCell"></param>
+            <param name="endCell"></param>
+        </member>
+        <member name="M:LIMS_API.Bll.LaboratoryJobBll.CreateLaboratoryJobTemplate(LIMS_API.Models.LaboratoryJobModel)">
+            <summary>
+            CreateLaboratoryJobTemplate
+            </summary>
+            <param name="labModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Bll.QuotationCommissionBll.CreateQuotationCommissionTemplate(LIMS_API.Models.QuotationCommissionModel)">
+            <summary>
+            Create QuotationCommission Template
+            </summary>
+            <param name="qcModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Bll.SamplingWorkOrderBll.CreateSamplingWorkOrderTemplate(LIMS_API.Models.SamplingWordOrderModel)">
+            <summary>
+            create SamplingWorkOrder
+            </summary>
+            <param name="swoModel"></param>
+        </member>
+        <member name="M:LIMS_API.Controllers.LimsController.GetDownloadFile(System.String,System.Int64,System.String)">
+            <summary>
+            GetDownloadFile(ResponseFile)
+            </summary>
+            <param name="fileName"></param>
+            <param name="e"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Controllers.LimsController.SamplingWorkOrder(LIMS_API.Models.SamplingWordOrderModel)">
+            <summary>
+            SamplingWorkOrder Create to PDF
+            </summary>
+            <param name="swoModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Controllers.LimsController.QuotationCommission(LIMS_API.Models.QuotationCommissionModel)">
+            <summary>
+            QuotationCommission Create to PDF
+            </summary>
+            <param name="qcModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Controllers.LimsController.LaboratoryJob(LIMS_API.Models.LaboratoryJobModel)">
+            <summary>
+            LaboratoryJob create to pdf
+            </summary>
+            <param name="labModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Controllers.LimsController.UpLoadSamplingSiteImage(Microsoft.AspNetCore.Http.IFormFile,System.String)">
+            <summary>
+            UpLoadSamplingSiteImage
+            </summary>
+            <param name="image"></param>
+            <param name="orderName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Controllers.LimsController.DeleteSamplingSiteImage(limsapi.Models.DeleteImageModel)">
+            <summary>
+            DeleteSamplingSiteImage
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Controllers.LimsController.TestResult(LIMS_API.Models.TestResultModel)">
+            <summary>
+            TestResult
+            </summary>
+            <param name="trModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Controllers.LimsController.GetDraftReportFile(System.String,System.Int64,System.String)">
+            <summary>
+            GetDraftReportFile
+            </summary>
+            <param name="fileName"></param>
+            <param name="e"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Controllers.LimsController.CreateDraftReport(LIMS_API.Models.FinalReportModel)">
+            <summary>
+            FinalReport
+            </summary>
+            <param name="frModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Controllers.LimsController.UpLoadDraftReport(Microsoft.AspNetCore.Http.IFormFile,System.String)">
+            <summary>
+            UpLoadReport
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LIMS_API.Controllers.LimsController.CreateFinalReport(limsapi.Models.FinalReportRequest)">
+            <summary>
+            CreateFinalReport
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:LIMS_API.Models.FinalReportModel.OtherInfo.testProject">
+            <summary>
+            检测项目
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.FinalReportModel.OtherInfo.detectionLimit">
+            <summary>
+            检出限
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.FinalReportModel.OtherInfo.testStandard">
+            <summary>
+            检测方法依据
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.FinalReportModel.OtherInfo.equipmentName">
+            <summary>
+            检测设备名称及型号
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.FinalReportModel.OtherInfo.serialNumber">
+            <summary>
+            出厂编号
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.securityCode">
+            <summary>
+            识别码
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.orderCode">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.receivedSampleDate">
+            <summary>
+            收样日期
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.resultDate">
+            <summary>
+            实验室出结果日期
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.principalName">
+            <summary>
+            现场负责人姓名
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.principalPhone">
+            <summary>
+            现场负责人电话
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.SampleTestList.samplingDate">
+            <summary>
+            采样日期
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.SampleTestList.sampleCode">
+            <summary>
+            样品编号
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.SampleTestList.pozition">
+            <summary>
+            点位
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.SampleTestList.pozitionName">
+            <summary>
+            点位名称
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.SampleTestList.samplestatus">
+            <summary>
+            样品状态
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.SampleTestList.detectionProject">
+            <summary>
+            检测项目
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.SampleTestList.detectionMethod">
+            <summary>
+            检测方法
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.LaboratoryJobModel.SampleTestList.remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:LIMS_API.Models.QuotationCommissionModel">
+            <summary>
+            报价单
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.code">
+            <summary>
+            委托书编号
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.securityCode">
+            <summary>
+            识别码
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.client">
+            <summary>
+            委托单位名称
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.clientAddress">
+            <summary>
+            委托单位地址
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.clientContact">
+            <summary>
+            委托联系人
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.clientContactPhone">
+            <summary>
+            委托联系人电话
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.inspectedUnit">
+            <summary>
+            受检单位
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.inspectedUnitAddress">
+            <summary>
+            受检单位地址
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.inspectedUnitContact">
+            <summary>
+            受检单位联系人
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.inspectedUnitPhone">
+            <summary>
+            受检单位联系电话
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.customerServiceName">
+            <summary>
+            客服姓名
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.customerServicePhone">
+            <summary>
+            客服电话
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.testCost">
+            <summary>
+            测试费用小计
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.siteInvestigationAmount">
+            <summary>
+            现场勘察及差旅费用
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.totalAmount">
+            <summary>
+            费用总计
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.taxRate">
+            <summary>
+            税率
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.taxManagementAmount">
+            <summary>
+            税收管理费
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.totalAmountInTax">
+            <summary>
+            费用合计
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.finalPrice">
+            <summary>
+            最终优惠价格
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.projectType">
+            <summary>
+            项目类型
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.testCycle">
+            <summary>
+            测试周期
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.reportForm">
+            <summary>
+            报告形式
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.resSampleTreatment">
+            <summary>
+            余样处理
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.proTestMethod">
+            <summary>
+            测试方法
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.invoiceHeader">
+            <summary>
+            发票抬头
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.invoiceType">
+            <summary>
+            发票类型
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.taxpayerNumber">
+            <summary>
+            纳税人识别号
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.companyAddress">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.bankName">
+            <summary>
+            开户行名称
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.bankAccount">
+            <summary>
+            开户行账户
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.cooCompanyName">
+            <summary>
+            合作公司名称
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.cooCompanyAddress">
+            <summary>
+            合作公司地址
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.cooCompanyTaxNumber">
+            <summary>
+            合作公司税号
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.cooCompanyBankName">
+            <summary>
+            合作公司开户行
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.cooCompanyBankAccount">
+            <summary>
+            合作公司开户行账户
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.testingPlanList">
+            <summary>
+            检测计划 费用明细
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.TestingPlan.matrix">
+            <summary>
+            基质
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.TestingPlan.projectContent">
+            <summary>
+            项目内容
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.TestingPlan.cost">
+            <summary>
+            测试费用
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.TestingPlan.point">
+            <summary>
+            点位
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.TestingPlan.frequency">
+            <summary>
+            频次
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.TestingPlan.cycle">
+            <summary>
+            周期
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.TestingPlan.subtotal">
+            <summary>
+            小计(元)
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.testStandardList">
+            <summary>
+            检测方法依据
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.TestStandard.projectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.QuotationCommissionModel.TestStandard.standardName">
+            <summary>
+            检测标准名称
+            </summary>
+        </member>
+        <member name="T:LIMS_API.Models.SamplingWordOrderModel">
+            <summary>
+            采样工作单
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.Code">
+            <summary>
+            采样工作单编号
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.securityCode">
+            <summary>
+            采样工作单识别码
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.client">
+            <summary>
+            委托单位名称
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.clientAddress">
+            <summary>
+            委托单位地址
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.clientContact">
+            <summary>
+            委托联系人
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.clientContactPhone">
+            <summary>
+            委托联系人电话
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.inspectedUnit">
+            <summary>
+            受检单位
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.inspectedUnitAddress">
+            <summary>
+            受检单位地址
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.inspectedUnitContact">
+            <summary>
+            受检单位联系人
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.inspectedUnitPhone">
+            <summary>
+            受检单位联系电话
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.customerServiceName">
+            <summary>
+            客服姓名
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.customerServicePhone">
+            <summary>
+            客服电话
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.projectType">
+            <summary>
+            项目类型
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.samplingAddress">
+            <summary>
+            采样地址
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.technicalRequirement">
+            <summary>
+            技术要求
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.samplingStartDate">
+            <summary>
+            采样开始时间
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.samplingEndDate">
+            <summary>
+            采样结束时间
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.samplingRemark">
+            <summary>
+            采样备注
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.samplingPlanList">
+            <summary>
+            采样计划
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingPlan.matrix">
+            <summary>
+            基质
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingPlan.project">
+            <summary>
+            检测项目/参数
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingPlan.analyticalMethod">
+            <summary>
+            分析方法/标准
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingPlan.point">
+            <summary>
+            样品点位
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingPlan.frequency">
+            <summary>
+            样品频次
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingPlan.cycle">
+            <summary>
+            样品天数周期
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.samplingProgramDisplay">
+            <summary>
+            控制采样方案是否显示
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.samplingProgramList">
+            <summary>
+            采样方案
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingProgram.project">
+            <summary>
+            检测项目/参数
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingProgram.samplingEquipment">
+            <summary>
+            采样仪器
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingProgram.samplingMaterial">
+            <summary>
+            采样耗材
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingProgram.samplingFlow">
+            <summary>
+            采样流量
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingProgram.samplingTime">
+            <summary>
+            采样时间	
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingProgram.minSampleSize">
+            <summary>
+            最小样品量
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingProgram.sampleKeepCondition">
+            <summary>
+            样品保存条件
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingProgram.sampleTimeliness">
+            <summary>
+            样品时效性
+            </summary>
+        </member>
+        <member name="P:LIMS_API.Models.SamplingWordOrderModel.SamplingProgram.samplingBlank">
+            <summary>
+            空白
+            </summary>
+        </member>
+    </members>
+</doc>
