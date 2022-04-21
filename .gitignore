@@ -335,3 +335,5 @@ ASALocalRun/
 ./Lenovo.Nitrogen.D365/Lenovo.Nitrogen.D365CE/Lenovo.Nitrogen.D365CE.UnitTests/app.config
 ./Lenovo.Nitrogen.D365/Lenovo.Nitrogen.D365CE/UnitTestProject1
 /Lenovo.Nitrogen.D365/Lenovo.Nitrogen.D365CE/Lenovo.Nitrogen.D365CE.Processes/GeoCountry/GeoCountryPreExtensionBase.cs
+pdf2docx/source/
+pdf2docx/target/
