@@ -337,3 +337,5 @@ ASALocalRun/
 /Lenovo.Nitrogen.D365/Lenovo.Nitrogen.D365CE/Lenovo.Nitrogen.D365CE.Processes/GeoCountry/GeoCountryPreExtensionBase.cs
 pdf2docx/source/
 pdf2docx/target/
+Batch Print/BatchPrintProgram/Extend/Aspose.PDF.dll
+Batch Print/BatchPrintProgram/Extend/Aspose.Words.dll
