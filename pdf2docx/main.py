@@ -9,6 +9,6 @@ def main(pdf_file, docx_file):
 
 
 if __name__ == "__main__":
-    source_path = 'source\\MB-210_237Q.pdf'
-    target_path = 'target\\MB-210.docx'
+    source_path = 'source\\MS-900_198Q.pdf'
+    target_path = 'target\\MS-900.docx'
     main(source_path, target_path)
